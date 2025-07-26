@@ -29,6 +29,22 @@ A production-ready full-stack inventory management application built with:
 - Toast notifications for UX feedback
 
 ---
+## 🖼️ App Screenshots
+
+### 🔐 Login Page
+![Login](https://github.com/skipper-108/project/raw/main/assets/login.png)
+
+### 📦 Products Page
+![Products](https://github.com/skipper-108/project/raw/main/assets/products.png)
+
+### ➕ New Product Page
+![New Product](https://github.com/skipper-108/project/raw/main/assets/newProduct.png)
+
+### 👤 New User Registration
+![New User](https://github.com/skipper-108/project/raw/main/assets/newUser.png)
+
+### 📊 Dashboard
+![Dashboard](https://github.com/skipper-108/project/raw/main/assets/dashBoard.png)
 
 
 
