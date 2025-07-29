@@ -46,7 +46,9 @@ A production-ready full-stack inventory management application built with:
 ### 📊 Dashboard
 ![Dashboard](https://github.com/skipper-108/project/raw/main/assets/dashBoard.png)
 
-
+Docker
+  Build and Run
+  docker-compose up --build
 
 
 ### 1. Clone this repo
