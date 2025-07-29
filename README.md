@@ -1,57 +1,58 @@
 # 🧾 Inventory Management Tool
 
-A production-ready full-stack inventory management application built with:
-
-- **Backend**: Node.js, Express, PostgreSQL, Sequelize, JWT Auth
-- **Frontend**: React, Tailwind CSS
-- **Docs**: Swagger (OpenAPI)
-- **Containerization**: Docker & Docker Compose
+A full-stack, production-ready **Inventory Management System** built using Node.js, Express, PostgreSQL, Sequelize, and React — all containerized using Docker for seamless deployment and scalability.
 
 ---
 
-## 📦 Backend Features
+## 🚀 Tech Stack
 
-- User registration & login (JWT)
-- Product CRUD (create, list, update quantity)
-- Swagger API documentation
+- **Backend**: Node.js, Express, Sequelize ORM, PostgreSQL
+- **Frontend**: React.js, Tailwind CSS
+- **Authentication**: JWT-based
+- **API Docs**: Swagger (OpenAPI)
+- **DevOps**: Docker & Docker Compose
+
+---
+
+## 🔧 Features
+
+### ✅ Backend
+- User **registration & login** with JWT Auth
+- Full **CRUD operations** on products
+- **Swagger-based API documentation**
 - PostgreSQL + Sequelize ORM
-- Security (Helmet, CORS, Rate Limiting)
-- Dockerized backend for consistent deployment
+- Security middleware: **Helmet**, **CORS**, **Rate Limiting**
+- Dockerized Node.js backend
+
+### 🎯 Frontend
+- **Responsive** UI with Tailwind CSS
+- **Login/Register** authentication pages
+- **Product dashboard** with inventory operations
+- **Axios** for API requests with JWT support
+- User feedback via **toast notifications**
 
 ---
 
-## 🖥️ Frontend Features
+## 🖼️ Screenshots
 
-- Auth pages (Register/Login)
-- Dashboard & product inventory management
-- Responsive UI using Tailwind CSS
-- Axios for API requests with token support
-- Toast notifications for UX feedback
+| Login | Products | Add Product |
+|-------|----------|-------------|
+| ![Login](https://github.com/skipper-108/project/raw/main/assets/login.png) | ![Products](https://github.com/skipper-108/project/raw/main/assets/products.png) | ![New Product](https://github.com/skipper-108/project/raw/main/assets/newProduct.png) |
+
+| Register | Dashboard |
+|----------|-----------|
+| ![New User](https://github.com/skipper-108/project/raw/main/assets/newUser.png) | ![Dashboard](https://github.com/skipper-108/project/raw/main/assets/dashBoard.png) |
 
 ---
-## 🖼️ App Screenshots
 
-### 🔐 Login Page
-![Login](https://github.com/skipper-108/project/raw/main/assets/login.png)
+## 🐳 Docker Setup
 
-### 📦 Products Page
-![Products](https://github.com/skipper-108/project/raw/main/assets/products.png)
+Make sure you have Docker & Docker Compose installed.
 
-### ➕ New Product Page
-![New Product](https://github.com/skipper-108/project/raw/main/assets/newProduct.png)
+### 1️⃣ Clone the Repository
 
-### 👤 New User Registration
-![New User](https://github.com/skipper-108/project/raw/main/assets/newUser.png)
-
-### 📊 Dashboard
-![Dashboard](https://github.com/skipper-108/project/raw/main/assets/dashBoard.png)
-
-Docker
-  Build and Run
-  docker-compose up --build
-
-
-### 1. Clone this repo
 ```bash
 git clone https://github.com/skipper-108/project.git
-
+cd project
+DATABASE_URL=postgresql://postgres:yourpassword@db:5432/inventory_db
+docker-compose up --build
