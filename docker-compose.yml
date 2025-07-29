@@ -7,11 +7,16 @@ services:
       dockerfile: Dockerfile
     container_name: backend-app
     ports:
-      - "8080:3000"          # host:container
+      - "8080:3000"   # host:container
     environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=inventory_db
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
       - NODE_ENV=production
     depends_on:
-      - mongo
+      - postgres
     restart: unless-stopped
 
   frontend:
@@ -20,18 +25,21 @@ services:
       dockerfile: Dockerfile
     container_name: frontend-app
     ports:
-      - "3000:3000"          # Vite frontend
+      - "3000:3000"  # Vite default port
     restart: unless-stopped
 
-  mongo:
-    image: mongo:6
-    container_name: mongo-db
+  postgres:
+    image: postgres:15
+    container_name: postgres-db
+    environment:
+      - POSTGRES_DB=inventory_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     ports:
-      - "27017:27017"
+      - "5432:5432"
     volumes:
-      - mongo-data:/data/db
+      - pgdata:/var/lib/postgresql/data
     restart: unless-stopped
 
 volumes:
-  mongo-data:
-
+  pgdata:
